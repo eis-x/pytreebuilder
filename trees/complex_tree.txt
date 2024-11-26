@@ -1,0 +1,43 @@
+complex_project/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── helpers.py
+│   │   └── validators.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   └── product.py
+│   └── controllers/
+│       ├── __init__.py
+│       ├── user_controller.py
+│       └── product_controller.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_main.py
+│   ├── test_utils/
+│   │   ├── __init__.py
+│   │   ├── test_helpers.py
+│   │   └── test_validators.py
+│   ├── test_models/
+│   │   ├── __init__.py
+│   │   ├── test_user.py
+│   │   └── test_product.py
+│   └── test_controllers/
+│       ├── __init__.py
+│       ├── test_user_controller.py
+│       └── test_product_controller.py
+├── docs/
+│   ├── index.md
+│   ├── installation.md
+│   └── usage.md
+├── scripts/
+│   ├── deploy.sh
+│   └── setup.sh
+├── .gitignore
+├── requirements.txt
+├── setup.py
+├── README.md
+└── LICENSE

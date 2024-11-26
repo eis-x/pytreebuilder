@@ -1,0 +1,10 @@
+anyproject/
+├── anyproject/
+│   ├── __init__.py
+│   └── anyproject.py
+├── tests/
+│   ├── __init__.py
+│   └── test_anyproject.py
+├── setup.py
+├── README.md
+└── LICENSE
