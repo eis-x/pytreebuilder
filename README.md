@@ -1,5 +1,3 @@
-Sure! Here's the updated help file for your `pytreebuilder` project, including the detailed description of the module's functionalities:
-
 # pytreebuilder
 
 ## Table of Contents
