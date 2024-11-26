@@ -1,0 +1,21 @@
+pytreebuilder/
+├── examples/
+│   ├── any_project_tree.py
+│   └── complex_tree.py
+├── logs/
+│   └── pytreebuilder.log
+├── tests/
+│   ├── __init__.py
+│   └── test_pytreebuilder.py
+├── pytreebuilder/
+│   ├── __init__.py
+│   └── pytreebuilder.py
+├── trees/
+│   ├── any_project_tree.txt
+│   └── complex_tree.txt
+├── .gitignore
+├── DISCRIPTION.md
+├── LICENSE
+├── README.md
+├── setup.py
+└── TREE
