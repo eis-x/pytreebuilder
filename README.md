@@ -120,7 +120,7 @@ The module creates files and directories based on the description provided in th
 
 #### 7. Example Project Structure
 The module can create complex project structures from description files. For example, the file `trees/any_project_tree.txt` can contain the following structure:
-```plaintext
+```markdown
 anyproject/
 ├── anyproject/
 │   ├── __init__.py
@@ -147,7 +147,7 @@ The module is accompanied by detailed documentation and a README file to help us
 
 ### Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
-```plaintext
+```markdown
 anyproject/
 ├── anyproject/
 │   ├── __init__.py
