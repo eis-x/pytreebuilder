@@ -157,3 +157,5 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#Backup off README.md file
+README-BACK.md

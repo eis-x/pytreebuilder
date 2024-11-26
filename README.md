@@ -1,3 +1,5 @@
+Sure! Here's the updated help file for your `pytreebuilder` project, including the detailed description of the module's functionalities:
+
 # pytreebuilder
 
 ## Table of Contents
@@ -8,6 +10,17 @@
   - [Description of the `pytreebuilder` Project](#description-of-the-pytreebuilder-project)
     - [Objective](#objective)
     - [Key Features](#key-features)
+    - [Detailed Description of Functionalities](#detailed-description-of-functionalities)
+      - [1. Automatic Creation of Project Structures](#1-automatic-creation-of-project-structures)
+      - [2. Update Mode](#2-update-mode)
+      - [3. Logging Configuration](#3-logging-configuration)
+      - [4. Error Handling](#4-error-handling)
+      - [5. Command Line Arguments](#5-command-line-arguments)
+      - [6. Creation of Files and Directories](#6-creation-of-files-and-directories)
+      - [7. Example Project Structure](#7-example-project-structure)
+      - [8. Installation and Usage](#8-installation-and-usage)
+      - [9. Unit Testing](#9-unit-testing)
+      - [10. Documentation and Support](#10-documentation-and-support)
     - [Any Project Structure](#any-project-structure)
     - [Installation](#installation)
       - [Cloning the Repository](#cloning-the-repository)
@@ -55,6 +68,7 @@
 - **pytreebuilder/** : Core module directory containing the main functionality.
   - **__init__.py** : Initialization file for the `pytreebuilder` package.
   - **pytreebuilder.py** : Main script containing the `PyTreeBuilder` class and its methods.
+  - **version.py** : Contains the name and version of the `pytreebuilder` project.
 
 - **trees/** : Directory containing project structure description files.
   - **any_project_tree.txt** : Description file for a simple project structure.
@@ -81,6 +95,57 @@ The `pytreebuilder` project aims to simplify the creation of project structures 
 - Automatic creation of directories and files from a structure description file.
 - Logging configuration to track actions performed by the module.
 - Error handling to ensure smooth and uninterrupted execution.
+- Update mode to create only new files and directories without overwriting existing ones.
+
+### Detailed Description of Functionalities
+
+#### 1. Automatic Creation of Project Structures
+The `pytreebuilder` module allows for the automatic creation of project structures from a structure description file. This enables developers to quickly and easily generate consistent and well-organized project structures.
+
+#### 2. Update Mode
+The module includes an update mode (`update_mode`) that allows for the creation of only new files and directories without overwriting existing ones. This ensures that existing files and directories are not modified unless the user provides consent.
+
+#### 3. Logging Configuration
+The module configures a logging system to track the actions performed. Logs are recorded in a `pytreebuilder.log` file located in the `logs` directory. This helps keep track of the actions performed by the module and facilitates debugging in case of issues.
+
+#### 4. Error Handling
+The module handles errors to ensure smooth and uninterrupted execution. For example, it handles file not found errors and general exceptions, logging error messages in the log file.
+
+#### 5. Command Line Arguments
+The module accepts several command line arguments to customize its behavior:
+- `-t` or `--tree-file-path` : Path to the structure description file (required).
+- `-u` or `--update` : Run in update mode to create only new files and directories without overwriting existing ones.
+- `-v` or `--version` : Show the program's version number and exit.
+
+#### 6. Creation of Files and Directories
+The module creates files and directories based on the description provided in the structure file. It checks if files and directories already exist and asks for user validation before overwriting them, unless the update mode is enabled.
+
+#### 7. Example Project Structure
+The module can create complex project structures from description files. For example, the file `trees/any_project_tree.txt` can contain the following structure:
+```
+anyproject/
+├── anyproject/
+│   ├── __init__.py
+│   └── anyproject.py
+├── tests/
+│   ├── __init__.py
+│   └── test_anyproject.py
+├── setup.py
+├── README.md
+└── LICENSE
+```
+
+#### 8. Installation and Usage
+The module can be installed locally or via the internet. Once installed, it can be used to generate project structures by running Python scripts that utilize the `PyTreeBuilder` class.
+
+#### 9. Unit Testing
+The module includes unit tests to verify its functionality. Tests can be run using the following command:
+```bash
+python -m unittest discover tests/
+```
+
+#### 10. Documentation and Support
+The module is accompanied by detailed documentation and a README file to help users understand its functionality and use it effectively. For questions or assistance, users can contact the project author via GitHub.
 
 ### Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
@@ -124,6 +189,8 @@ To install the `pytreebuilder` module from PyPI, use the following command:
 pip install pytreebuilder
 ```
 
+Sure! Let's continue with the help file for your `pytreebuilder` project from the "Usage" section:
+
 ### Usage
 
 #### Running the Script
@@ -135,6 +202,7 @@ python examples/any_project_tree.py
 #### Command Line Arguments
 The `pytreebuilder` module accepts the following command line arguments:
 - `-t` or `--tree-file-path` : Path to the structure description file (required).
+- `-u` or `--update` : Run in update mode to create only new files and directories without overwriting existing ones.
 - `-v` or `--version` : Show the program's version number and exit.
 
 ### How to Test the `pytreebuilder` Module
@@ -251,7 +319,3 @@ For any questions or assistance, please contact the project author via GitHub.
 
 ### Copyright
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-If you have any questions or suggestions for improvement, feel free to let me know! 😊

@@ -7,6 +7,8 @@ Github: https://github.com/eis-x/pytreebuilder
 """
 
 from setuptools import setup, find_packages
+#name = "pytreebuilder"
+#version = "1.0"
 from pytreebuilder.utils import name, version
 setup(
     name=name,
