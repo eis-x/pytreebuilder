@@ -16,10 +16,11 @@
       - [5. Command Line Arguments](#5-command-line-arguments)
       - [6. Creation of Files and Directories](#6-creation-of-files-and-directories)
       - [7. Example Project Structure](#7-example-project-structure)
+  - [Any Project Structure](#any-project-structure)
       - [8. Installation and Usage](#8-installation-and-usage)
       - [9. Unit Testing](#9-unit-testing)
       - [10. Documentation and Support](#10-documentation-and-support)
-    - [Any Project Structure](#any-project-structure)
+    - [Any Project Structure](#any-project-structure-1)
     - [Installation](#installation)
       - [Cloning the Repository](#cloning-the-repository)
       - [Local Installation](#local-installation)
@@ -120,18 +121,24 @@ The module creates files and directories based on the description provided in th
 
 #### 7. Example Project Structure
 The module can create complex project structures from description files. For example, the file `trees/any_project_tree.txt` can contain the following structure:
-```markdown
+
+## Any Project Structure
+The structure description file `trees/any_project_tree.txt` contains the following structure:
+
+<div style="position: relative; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+    <pre>
 anyproject/
-├── anyproject/
-│   ├── __init__.py
-│   └── anyproject.py
-├── tests/
-│   ├── __init__.py
-│   └── test_anyproject.py
-├── setup.py
-├── README.md
-└── LICENSE
-```
+&#x251C;&#x2500;&#x2500; anyproject/
+&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;   &#x2514;&#x2500;&#x2500; anyproject.py
+&#x251C;&#x2500;&#x2500; tests/
+&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;   &#x2514;&#x2500;&#x2500; test_anyproject.py
+&#x251C;&#x2500;&#x2500; setup.py
+&#x251C;&#x2500;&#x2500; README.md
+&#x2514;&#x2500;&#x2500; LICENSE
+    </pre>
+</div>
 
 #### 8. Installation and Usage
 The module can be installed locally or via the internet. Once installed, it can be used to generate project structures by running Python scripts that utilize the `PyTreeBuilder` class.
@@ -147,18 +154,25 @@ The module is accompanied by detailed documentation and a README file to help us
 
 ### Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
-```markdown
+
+<div style="position: relative; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+    <pre>
 anyproject/
-├── anyproject/
-│   ├── __init__.py
-│   └── anyproject.py
-├── tests/
-│   ├── __init__.py
-│   └── test_anyproject.py
-├── setup.py
-├── README.md
-└── LICENSE
-```
+&#x251C;&#x2500;&#x2500; anyproject/
+&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;   &#x2514;&#x2500;&#x2500; anyproject.py
+&#x251C;&#x2500;&#x2500; tests/
+&#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;   &#x2514;&#x2500;&#x2500; test_anyproject.py
+&#x251C;&#x2500;&#x2500; setup.py
+&#x251C;&#x2500;&#x2500; README.md
+&#x2514;&#x2500;&#x2500; LICENSE
+    </pre>
+</div>
+
+<script>
+    document.charset = "UTF-8";
+</script>
 
 ### Installation
 
