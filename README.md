@@ -124,7 +124,7 @@ The module can create complex project structures from description files. For exa
 ## Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
 
-<pre><code class="language-bash">
+<pre><code class="language-plaintext">
 anyproject/
 &#x251C;&#x2500;&#x2500; anyproject/
 &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
