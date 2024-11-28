@@ -16,7 +16,7 @@
       - [5. Command Line Arguments](#5-command-line-arguments)
       - [6. Creation of Files and Directories](#6-creation-of-files-and-directories)
       - [7. Example Project Structure](#7-example-project-structure)
-  - [Any Project Structure](#any-project-structure)
+        - [Any Project Structure](#any-project-structure)
       - [8. Installation and Usage](#8-installation-and-usage)
       - [9. Unit Testing](#9-unit-testing)
       - [10. Documentation and Support](#10-documentation-and-support)
@@ -121,7 +121,7 @@ The module creates files and directories based on the description provided in th
 #### 7. Example Project Structure
 The module can create complex project structures from description files. For example, the file `trees/any_project_tree.txt` can contain the following structure:
 
-## Any Project Structure
+##### Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
 
 <pre><code class="language-plaintext">
