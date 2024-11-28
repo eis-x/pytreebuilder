@@ -125,8 +125,7 @@ The module can create complex project structures from description files. For exa
 ## Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
 
-<div style="position: relative; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
-    <pre>
+<pre><code class="language-bash">
 anyproject/
 &#x251C;&#x2500;&#x2500; anyproject/
 &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
@@ -137,8 +136,7 @@ anyproject/
 &#x251C;&#x2500;&#x2500; setup.py
 &#x251C;&#x2500;&#x2500; README.md
 &#x2514;&#x2500;&#x2500; LICENSE
-    </pre>
-</div>
+</code></pre>
 
 #### 8. Installation and Usage
 The module can be installed locally or via the internet. Once installed, it can be used to generate project structures by running Python scripts that utilize the `PyTreeBuilder` class.
@@ -155,8 +153,7 @@ The module is accompanied by detailed documentation and a README file to help us
 ### Any Project Structure
 The structure description file `trees/any_project_tree.txt` contains the following structure:
 
-<div style="position: relative; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
-    <pre>
+<pre><code class="language-bash">
 anyproject/
 &#x251C;&#x2500;&#x2500; anyproject/
 &#x2502;   &#x251C;&#x2500;&#x2500; __init__.py
@@ -167,12 +164,7 @@ anyproject/
 &#x251C;&#x2500;&#x2500; setup.py
 &#x251C;&#x2500;&#x2500; README.md
 &#x2514;&#x2500;&#x2500; LICENSE
-    </pre>
-</div>
-
-<script>
-    document.charset = "UTF-8";
-</script>
+</code></pre>
 
 ### Installation
 

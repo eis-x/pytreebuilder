@@ -6,4 +6,4 @@ Creator: eis-x
 """
 
 name = "pytreebuilder"
-version = "0.1.7"
+version = "0.1.8"
