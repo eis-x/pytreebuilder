@@ -1,5 +1,5 @@
 param (
-    [string]$Commit = "Intial Commit"
+    [string]$Commit = "Update"
 )
 
 git add .

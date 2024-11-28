@@ -18,7 +18,7 @@ class PyTreeBuilder:
         update_mode (bool): Flag to indicate if the script should run in update mode.
     """
 
-    def __init__(self, tree_file_path, update_mode=False):
+    def __init__(self, tree_file_path, update_mode=False) -> None:
         """
         Initializes the PyTreeBuilder class with the project structure description file.
 
@@ -26,23 +26,27 @@ class PyTreeBuilder:
             tree_file_path (str): Path to the project structure description file.
             update_mode (bool): Flag to indicate if the script should run in update mode.
         """
-        self.tree_file_path = tree_file_path
-        self.update_mode = update_mode
+        self.tree_file_path:str = os.path.abspath(tree_file_path)
+        self.update_mode: bool = update_mode
         self.setup_logging()
 
-    def setup_logging(self):
+    def setup_logging(self) -> None:
         """
         Configures the logging system.
         """
-        if not os.path.exists('logs'):
-            os.makedirs('logs')
+        script_dir_path: str = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        log_dir_path: str = os.path.join(script_dir_path, 'logs')
+        if not os.path.exists(log_dir_path):
+            os.makedirs(log_dir_path)
 
-        logging.basicConfig(filename='logs/pytreebuilder.log', level=logging.INFO,
+        log_file_path = os.path.join(log_dir_path, 'pytreebuilder.log')
+        logging.basicConfig(filename=log_file_path, level=logging.INFO,
                             format='%(asctime)s:%(levelname)s:%(message)s', encoding='utf-8')
 
         logging.info("Starting PyTreeBuilder")
 
-    def create_file(self, file_path, content=""):
+
+    def create_file(self, file_path, content="") -> None:
         """
         Creates a file with the specified content.
 
@@ -50,6 +54,7 @@ class PyTreeBuilder:
             file_path (str): Path to the file to be created.
             content (str): Content to write to the file.
         """
+        file_path = os.path.abspath(file_path)
         if os.path.exists(file_path):
             if self.update_mode:
                 logging.info(f"File {file_path} already exists. Skipping in update mode.")
@@ -67,18 +72,18 @@ class PyTreeBuilder:
         logging.info(f"File created: {file_path}")
         print(f"File created: {file_path}")
 
-    def create_project_structure(self):
+    def create_project_structure(self) -> None:
         """
         Creates the project structure from a description file.
         """
         try:
             with open(self.tree_file_path, 'r', encoding='utf-8') as file:
-                lines = file.readlines()
+                lines: list[str] = file.readlines()
 
-            current_path = []
+            current_path:list[str] = []
             for line in lines:
-                line = line.rstrip()
-                depth = line.count('│') + line.count('├') + line.count('└') + line.count('    ')
+                line: str = line.rstrip()
+                depth: int = line.count('│') + line.count('├') + line.count('└') + line.count('    ')
                 name = line.split(' ')[-1]
 
                 # Update the current path based on the depth
@@ -86,8 +91,9 @@ class PyTreeBuilder:
                     current_path = current_path[:depth]
                 current_path.append(name)
 
-                path = os.path.join(*current_path)
+                path = os.path.abspath(os.path.join(*current_path))
                 if name.endswith('/'):
+                    
                     if os.path.exists(path):
                         if self.update_mode:
                             logging.info(f"Directory {path} already exists. Skipping in update mode.")
@@ -121,7 +127,7 @@ class PyTreeBuilder:
             logging.info("PyTreeBuilder execution finished")
 
 
-def main():
+def main() -> None:
     """
     Main entry point of the script.
     """
@@ -135,7 +141,7 @@ def main():
     # Check if the root directory of the project structure already exists
     with open(args.tree_file_path, 'r', encoding='utf-8') as file:
         first_line = file.readline().rstrip()
-    root_dir = first_line.split(' ')[-1]
+    root_dir = os.path.abspath(first_line.split(' ')[-1])
 
     if os.path.exists(root_dir) and not args.update:
         proceed = input(f"Project structure {root_dir} already exists. Continue? (y/n): ")
